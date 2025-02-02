@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakshabandhan Wishes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <img src="image-1.jpeg" alt="" class="img_deg"></div>
+        
+    
+        <div class="card" id="page1">
+            <h1>Happy Rakshabandhan rakhi didi</h1>
+            <p>Dear khiru didi,</p>
+            <p>Even though we are miles apart, you are always close to my heart. On this special occasion of Rakshabandhan, I want you to know how much you mean to me. May our bond of love and friendship continue to grow stronger with each passing day.</p>
+            <p>Wishing you joy, health, and all the happiness in the world. Have a wonderful Rakshabandhan!</p>
+            <p>With lots of love,<br>Your Brother</p>
+            
+            <button onclick="nextPage()">Next Page</button>
+        </div>
+           <div>  <p>a sister is a friend <br>given by nature. <p>by vivek bindra</p></p></div> 
+    </div>
+        
+        <div class="card" id="page2">
+            <h1>Special Gift for You!</h1>
+            <div class="gift">
+                <img src="chocolate.png" alt="Chocolate Gift">
+                <p>Here's a little something to sweeten your day. I hope you enjoy this chocolate treat!</p>
+            </div>
+            <button onclick="nextPage()">Next Page</button>
+            <button onclick="prevPage()">Previous Page</button>
+        </div>
+
+        <div class="card" id="page3">
+            <h1>Thank You!</h1>
+            <p>Thank you for being such an amazing sister. I hope these surprises bring a smile to your face. Remember, no matter the distance, my love for you is always close.</p>
+            <button onclick="prevPage()">Previous Page</button>
+            <button onclick="reloadPage()">Start Over</button>
+        </div>
+    </div>
+
+    <script>
+        let currentPage = 1;
+        
+        function showPage(pageNumber) {
+            document.getElementById(`page${currentPage}`).style.display = 'none';
+            document.getElementById(`page${pageNumber}`).style.display = 'block';
+            currentPage = pageNumber;
+        }
+
+        function nextPage() {
+            if (currentPage < 3) showPage(currentPage + 1);
+        }
+
+        function prevPage() {
+            if (currentPage > 1) showPage(currentPage - 1);
+        }
+
+        function reloadPage() {
+            showPage(1);
+        }
+
+        // Initialize first page
+        document.addEventListener('DOMContentLoaded', () => {
+            showPage(1);
+        });
+    </script>
+</body>
+</html>

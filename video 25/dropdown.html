@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css dropdown</title>
+    <style>
+        .dropdown{
+            border: none;
+            position: relative;
+            display: inline-block;
+        }
+        .content{
+            border: 2px solid black;
+            display: none;
+            position: absolute;
+            /* min-width: 160px; */
+            z-index: 1;
+            box-shadow: 0px 8px 16px 0 px ;
+        }
+        .yash{
+            background-color: rgb(51, 29, 3);
+            color: white;
+            font-size: 20px;
+            border: none;
+            padding: 10px;
+             cursor: pointer ; 
+        }
+        .content a:hover{background-color: #f1f1f1;}
+        .dropdown:hover .content{
+            display: block;
+        }
+        *{
+            text-transform: capitalize;
+        }
+
+        body{
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>dropdown menu</h1>
+    <p>move the mouse over the button to open the dropdown menu.</p>
+    <div class="dropdown">
+        <button class="yash">dropdown</button>
+        <div class="content">
+            <a href="link">contact link</a>
+            <a href="link1">about link</a>
+            <a href="link2">address link </a>
+        </div>
+    </div><br><br><br><br>
+    <p><strong>note:-</strong> this is a dropdown concept in css.... </p>
+    
+</body>
+</html>

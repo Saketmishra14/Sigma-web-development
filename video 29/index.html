@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css transition</title>
+    <style>
+        /* .container{  */
+        div{
+            width: 50vw;
+            height: 50vh;
+            background-color: blueviolet;
+            animation-name: class;
+            animation-duration: 5s;
+        }
+        .class{ 
+            width: 20vw;
+            height: 30vh;
+            background-color: red;
+            transition: duration 2s; 
+            transition-property:background-color, transform;
+            transition-timing-function:ease-in-out ;
+            transition-delay: 2s;
+            animation-name: translate;
+            animation-duration: 5s;
+            position: relative;
+            animation-iteration-count: 5;
+         } 
+     .translate{ 
+animation-name: translate;
+            transform: translateX(20vw) translateY(15vh);
+             background-color: blue; 
+
+         } 
+        @keyframes class{
+           from{background-color:blueviolet;}
+           to{background-color: rgb(87, 18, 18);}
+        }
+        @keyframes translate{
+            0%{background-color: white; left: 0px; top: 0px;}
+            34%{
+                background-color: black; left: 200px; top: 0px;
+            }
+            50%{background-color: green; left: 200px; top: 200px;}
+            75%{background-color: chartreuse; left: 0px; top: 200px;
+            }
+            100%{background-color: darkcyan; left: 0px; top: 0px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="class">
+
+        </div>
+    </div>
+    
+</body>
+</html>

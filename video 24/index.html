@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css navigation bar</title>
+    <style>
+        *{
+            text-transform: uppercase;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 250px;
+            background-color: #1bc715;
+            overflow: hidden;
+        }
+        li{
+            float: left;
+        }
+        li a{
+            width: 200px;
+            display: block;
+            color: #991e1e;
+            padding: 8px 25px;
+            text-decoration: none;
+        }
+        li a:hover{
+            background-color: #555;
+            color: rgb(172, 7, 7);
+        }
+        .active{
+            background-color: #04aa6d;
+            color: rgb(255, 255, 255);
+        }
+        body {
+  font-size: 28px;
+}
+
+ul {
+    display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgb(197, 36, 36);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #910c0c;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+    </style>
+</head>
+<body>
+    <h1>vertical navigation bar</h1>
+    <ul>
+        <li><a href="#home" class="active">home</a></li>
+        <li><a href="#contact">contact
+            <li><a href="#news">news</a></li>
+            <li><a href="about">about</a></li>
+        </a></li>
+    </ul>
+
+    
+</body>
+</html>

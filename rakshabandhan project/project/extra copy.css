@@ -1,0 +1,124 @@
+/* Basic Reset */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set background and center content */
+body {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden; /* Prevents scrollbar from showing due to animations */
+}
+
+/* Styling for container */
+.cont {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    border-radius: 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animation for heading */
+.animated-heading {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #f9c74f;
+    animation: bounce 2s infinite;
+}
+
+/* Animation for text */
+.animated-text {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 3s forwards;
+}
+
+/* Animation for Rakhi image */
+.animated-image {
+    max-width: 200px;
+    margin: 30px 0;
+    opacity: 0;
+    animation: zoomIn 2s forwards;
+}
+
+/* Animation for button */
+.animated-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #f94144;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    animation: slideUp 1.5s forwards;
+}
+
+.animated-button:hover {
+    background-color: #f3722c;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
